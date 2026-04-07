@@ -1165,9 +1165,7 @@ def render_dashboard():
         out = summary[list(display_cols.keys())].rename(columns=display_cols)
         st.dataframe(
             out.style
-               .applymap(lambda v: "color: #ff4c6a; font-weight:700" if v=="CRITICAL"
-                         else ("color: #fbbf24; font-weight:700" if v=="HIGH"
-                               else ("color: #34d399" if v=="LOW" else "")),
+              .applymap(lambda v: "color: #ff4c6a; font-weight:700" if v == "CRITICAL" else "")
                          subset=["Risk Level"])
                .format({"Data (MB)": "{:.1f}", "Downloads": "{:d}", "Restricted Hits": "{:d}"}),
             use_container_width=True, height=380
