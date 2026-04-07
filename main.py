@@ -36,6 +36,21 @@ label {
 
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+
+/* Sidebar text full white */
+section[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* Sidebar background thoda dark */
+section[data-testid="stSidebar"] {
+    background-color: #111827 !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 import pandas as pd
 import numpy as np
 import plotly.express as px
