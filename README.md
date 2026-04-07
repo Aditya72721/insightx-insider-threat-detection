@@ -5,12 +5,12 @@ INSIGHT-X is an AI-powered insider threat detection system that analyzes employe
 
 # Features
 
-- 🔍 Behavior Analysis Engine
-- 📊 Risk Scoring System
-- 📈 Interactive Dashboard (Streamlit)
-- 🚨 Real-time Alerts (Email + Telegram)
-- 🧠 AI-based anomaly detection
-- 📋 Alert Logs & Monitoring
+-  Behavior Analysis Engine
+-  Risk Scoring System
+-  Interactive Dashboard (Streamlit)
+-  Real-time Alerts (Email + Telegram)
+-  AI-based anomaly detection
+-  Alert Logs & Monitoring
 
 
 # Tech Stack
