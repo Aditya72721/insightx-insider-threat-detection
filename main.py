@@ -1162,12 +1162,13 @@ def render_dashboard():
             "total_downloads":"Downloads","total_mb":"Data (MB)","top_channel":"Primary Channel",
             "last_activity":"Last Activity","restricted_hits":"Restricted Hits","Risk Level":"Risk Level",
         }
-        out = summary[list(display_cols.keys())].rename(columns=display_cols)
-  st.dataframe(    
-    out,
-    use_container_width=True,
-    height=380
-)
+      out = summary[list(display_cols.keys())]
+
+    st.dataframe(
+        out,
+        use_container_width=True,
+        height=380
+    )
         st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("<div class='card-title'>Most Downloaded File Types</div>", unsafe_allow_html=True)
         ft = df.groupby("file_type")["size_mb"].sum().reset_index().sort_values("size_mb", ascending=False)
