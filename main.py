@@ -3032,5 +3032,4 @@ init_session()
 if st.session_state.logged_in:
     render_dashboard()
 else:
->>>>>>> 60215a4d7672ada00bf77161dc4acd140bdd3291
     render_login()
