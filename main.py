@@ -1156,22 +1156,20 @@ def render_dashboard():
         )
         summary["last_activity"] = summary["last_activity"].dt.strftime("%Y-%m-%d %H:%M")
         summary["total_mb"] = summary["total_mb"].round(1)
+   display_cols = {
+        "emp_id": "ID",
+        "name": "Name",
+        "total_downloads": "Downloads",
+        "last_activity": "Last Activity"
+    }
 
-        display_cols = {
-            "emp_id":"ID","name":"Name","department":"Department","role":"Role",
-            "total_downloads":"Downloads","total_mb":"Data (MB)","top_channel":"Primary Channel",
-            "last_activity":"Last Activity","restricted_hits":"Restricted Hits","Risk Level":"Risk Level",
-        }
-      out = summary[list(display_cols.keys())]
-st.dataframe(
-    out.style.applymap(
-        lambda v: "color: #ff4c6a; font-weight:700" if v == "CRITICAL" else "",
-        subset=["Risk Level"]
+    out = summary[list(display_cols.keys())]
+
+    st.dataframe(    
+        out,
+        use_container_width=True,
+        height=380
     )
-    .format({"Data (MB)": "{:.1f}", "Downloads": "{:d}"}),
-    use_container_width=True,
-    height=380
-)
         st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("<div class='card-title'>Most Downloaded File Types</div>", unsafe_allow_html=True)
         ft = df.groupby("file_type")["size_mb"].sum().reset_index().sort_values("size_mb", ascending=False)
