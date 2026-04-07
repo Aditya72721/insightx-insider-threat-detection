@@ -1163,7 +1163,6 @@ def render_dashboard():
             "last_activity":"Last Activity","restricted_hits":"Restricted Hits","Risk Level":"Risk Level",
         }
         out = summary[list(display_cols.keys())].rename(columns=display_cols)
-        st.dataframe(
   st.dataframe(
     out,
     use_container_width=True,
