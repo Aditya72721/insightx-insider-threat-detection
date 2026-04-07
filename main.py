@@ -1,21 +1,39 @@
 import streamlit as st
-st.set_page_config(page_title="App", layout="wide")
-
 st.markdown("""
 <style>
-body {
-    color: black !important;
-    background-color: white !important;
+
+/* Full app text */
+html, body, [class*="css"]  {
+    color: white !important;
 }
 
-h1, h2, h3 {
-    color: black !important;
+/* Background */
+.stApp {
+    background-color: #0E1117;
 }
 
+/* Input fields */
+input {
+    color: white !important;
+    background-color: #262730 !important;
+}
+
+/* Placeholder text */
+::placeholder {
+    color: #AAAAAA !important;
+}
+
+/* Labels */
+label {
+    color: white !important;
+}
+
+/* Button */
 .stButton>button {
     color: white !important;
     background-color: #4CAF50 !important;
 }
+
 </style>
 """, unsafe_allow_html=True)
 import pandas as pd
