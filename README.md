@@ -24,10 +24,10 @@ INSIGHT-X is an AI-powered insider threat detection system that analyzes employe
 
 # Installation
 
-git clone https://github.com/your-username/insightx-insider-threat-detection.git
-cd insightx-insider-threat-detection
-pip install -r requirements.txt
-streamlit run main.py
+- git clone https://github.com/Aditya72721/insightx-insider-threat-detection.git
+- cd insightx-insider-threat-detection
+- pip install -r requirements.txt
+- streamlit run main.py
 
 # Alert System
 - Email Alerts using Gmail SMTP
